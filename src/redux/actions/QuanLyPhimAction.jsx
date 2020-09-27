@@ -51,7 +51,7 @@ export const layChiTietPhimApiAction = (maPhim) => {
         });
         const action={
             type: LAY_CHI_TIET_PHIM,
-            dsPhim : data
+            chiTietPhim : data
         }
         dispatch(action);
     }

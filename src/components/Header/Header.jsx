@@ -14,10 +14,13 @@ export default function Header() {
                             <NavLink exact className="nav-link" activeClassName="activeMenuItem" activeStyle={{color:'red'}} to="/home">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" activeClassName="activeMenuItem" activeStyle={{fontWeight:'bold'}} to="/about">Link</NavLink>
+                            <NavLink className="nav-link" activeClassName="activeMenuItem" activeStyle={{fontWeight:'bold'}} to="/about">About</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="activeMenuItem" activeStyle={{fontWeight:'bold'}} to="/contact">Contact</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" activeClassName="activeMenuItem" activeStyle={{fontWeight:'bold'}} to="/hoc">HOC</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" activeClassName="activeMenuItem" activeStyle={{fontWeight:'bold'}} to="/login">Login</NavLink>

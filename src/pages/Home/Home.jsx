@@ -3,6 +3,9 @@ import axios from 'axios'
 import { connect,useSelector,useDispatch } from 'react-redux';
 import {layDanhSachPhimApiAction} from '../../redux/actions/QuanLyPhimAction'
 import { NavLink } from 'react-router-dom';
+import './Home.css'
+
+
 function Home(props) {
 
     //dùng useSelector thay cho mapStateToProps lấy danh sách phim từ reducer về
@@ -50,6 +53,7 @@ function Home(props) {
     const renderPhim = () => {
         console.log('dsPhim', props.dsPhim);
         return props.dsPhim.map((phim, index)=>{
+            
             return (
                 <div className="col-4">
                     <div className="card">

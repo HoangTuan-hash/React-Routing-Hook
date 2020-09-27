@@ -9,20 +9,26 @@ import Detail from './pages/Detail/Detail';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import Profile from './pages/Profile/Profile';
 import TrangChu from './pages/TrangChu/TrangChu';
+import DemoHOC from './pages/HOC/DemoHOC';
+import { HomeTemplate } from './templates/HomeTeaplate';
+import { AdminTemplate } from './templates/AdminTemPlate';
+import FilmsManager from './pages/Admin/FilmAnager/FilmsManager';
+import UserManager from './pages/Admin/UserManager/UserManager';
 function App() {
   return (
     <BrowserRouter>
-      <Header />
 
       <Switch>
-        <Route exact path='/home' component={Home}/>
-        <Route exact path='/contact' component={Contact}/>
-        <Route exact path='/about' component={About}/>
-        <Route exact path='/login' component={Login}/>
-        <Route exact path='/detail/:id' component={Detail}/>
-        <Route exact path='/profile' component={Profile}/>
-        <Route exact path='/trangchu' component={TrangChu}/>
-        
+        <HomeTemplate exact path='/home' Component = {Home}/>
+        <HomeTemplate exact path='/contact' Component={Contact}/>
+        <HomeTemplate exact path='/about' Component={About}/>
+        <HomeTemplate exact path='/hoc' Component={DemoHOC}/>
+        <HomeTemplate exact path='/login' Component={Login}/>
+        <HomeTemplate exact path='/detail/:id' Component={Detail}/>
+        <HomeTemplate exact path='/profile' Component={Profile}/>
+        <HomeTemplate exact path='/trangchu' Component={TrangChu}/>
+        <AdminTemplate exact path='/admin/films' Component={FilmsManager} />
+        <AdminTemplate exact path='/admin/users' Component={UserManager} />
 
         {/* <Route exact path='/login' render={(props) => {return (<div>
           <Header {...props} />
