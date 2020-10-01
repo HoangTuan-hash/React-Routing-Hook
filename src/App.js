@@ -14,6 +14,7 @@ import { HomeTemplate } from './templates/HomeTeaplate';
 import { AdminTemplate } from './templates/AdminTemPlate';
 import FilmsManager from './pages/Admin/FilmAnager/FilmsManager';
 import UserManager from './pages/Admin/UserManager/UserManager';
+import Booking from './pages/Booking/Booking';
 function App() {
   return (
     <BrowserRouter>
@@ -29,6 +30,9 @@ function App() {
         <HomeTemplate exact path='/trangchu' Component={TrangChu}/>
         <AdminTemplate exact path='/admin/films' Component={FilmsManager} />
         <AdminTemplate exact path='/admin/users' Component={UserManager} />
+        <Route exact path='/booking/:maLichChieu' render={(propsRoute)=>{
+          return <Booking {...propsRoute} />
+        }} />
 
         {/* <Route exact path='/login' render={(props) => {return (<div>
           <Header {...props} />
