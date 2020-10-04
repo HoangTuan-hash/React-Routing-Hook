@@ -32,7 +32,7 @@ export const layDanhSachPhimApiAction = () => {
     //thay vì return về object => midddlewarre thunk cho phép mình return về 1 function có tham số là 1 hàm dispatch
     return async dispatch => {
         const {data} = await axios({
-            url:'http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP09',
+            url:'https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP09',
             method:'GET'
         });
         const action={
@@ -46,7 +46,7 @@ export const layChiTietPhimApiAction = (maPhim) => {
     //thay vì return về object => midddlewarre thunk cho phép mình return về 1 function có tham số là 1 hàm dispatch
     return async dispatch => {
         const {data} = await axios({
-            url:`http://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}`,
+            url:`https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}`,
             method:'GET'
         });
         const action={

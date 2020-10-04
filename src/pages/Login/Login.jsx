@@ -1,12 +1,19 @@
 import React,{useState} from 'react'
 import {useDispatch} from 'react-redux'
 import { dangNhapApiAction } from '../../redux/actions/QuanLyNguoiDungAction';
+import {useHistory} from 'react-router-dom';
+
+
+
+
 export default function Login(props) {
     // const [state,setState] = useState({
     //     userLogin:{
     //         userName:'',
     //         passWord:''
     // }});
+    let history = useHistory();
+
     let dispatch = useDispatch();
     const [userLogin, setUserLogin] = useState({
         userName:'',
@@ -27,7 +34,7 @@ export default function Login(props) {
         
 
            //Gọi api đăng nhập
-            dispatch(dangNhapApiAction(userLogin));
+            dispatch(dangNhapApiAction(userLogin, history));
        
     }
     return (

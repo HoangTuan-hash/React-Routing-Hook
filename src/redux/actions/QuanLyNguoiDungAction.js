@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { DOMAIN, TOKEN, USER_LOGIN } from '../../ultity/ConfigWeb';
 
-export const dangNhapApiAction = (userLogin)=>{
+export const dangNhapApiAction = (userLogin, history)=>{
     return async dispatch => {
         try
         {
@@ -19,8 +19,10 @@ export const dangNhapApiAction = (userLogin)=>{
                     userLogin : data
                 });
                 //luu vao localStorae
-                localStorage.setItem(TOKEN,data.accessToken)
-                localStorage.setItem(USER_LOGIN,JSON.stringify( data))
+                localStorage.setItem(TOKEN,data.accessToken);
+                localStorage.setItem(USER_LOGIN,JSON.stringify( data));
+                // history.push('/home');
+                history.goBack();
             }
             //Sau khi gọi api => dispatch lên redux
             
